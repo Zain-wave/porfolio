@@ -2,3 +2,8 @@ body {
   background-color: black;
   color: white;
 }
+
+table {
+  border: 1;
+  border-color: white;
+}
