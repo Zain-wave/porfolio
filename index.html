@@ -108,18 +108,32 @@
 
       <section class="projects-section">
         <h2 class="section-title">💼 Proyectos Destacados</h2>
-        <table>
+
+        <!-- Navegación de filtros -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="html">HTML/CSS</button>
+          <button class="filter-btn" data-filter="javascript">
+            JavaScript
+          </button>
+        </div>
+
+        <table id="projects-table">
           <thead>
             <tr>
               <th>Proyecto</th>
               <th>Descripción</th>
+              <th>Tecnologías</th>
               <th>Repositorio</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <!-- Proyectos de Python -->
+            <tr class="project-item" data-tech="python">
               <td>10 ejercicios</td>
               <td>Ejercicios práctica Python</td>
+              <td><span class="tech-tag python">Python</span></td>
               <td>
                 <a
                   href="https://github.com/Zain-wave/python-inicial"
@@ -127,37 +141,13 @@
                   class="github-link"
                 >
                   <i class="fab fa-github"></i> Ver en GitHub
-              </td>
-            </tr>
-            <tr>
-              <td>Proyecto Domicilio</td>
-              <td>Sistema para solicitar domicilio</td>
-              <td>
-                <a
-                  href="https://github.com/Zain-wave/Domi"
-                  target="_blank"
-                  class="github-link"
-                >
-                  <i class="fab fa-github"></i> Ver en GitHub
                 </a>
               </td>
             </tr>
-            <tr>
-              <td>Proyecto Bicicletas</td>
-              <td>Sistema de alquiler de bicicletas</td>
-              <td>
-                <a
-                  href="https://github.com/Zain-wave/Green-City"
-                  target="_blank"
-                  class="github-link"
-                >
-                  <i class="fab fa-github"></i> Ver en GitHub
-                </a>
-              </td>
-            </tr>
-            <tr>
+            <tr class="project-item" data-tech="python">
               <td>CrudActivity - CrudData</td>
               <td>Estructuras de Datos en Python</td>
+              <td><span class="tech-tag python">Python</span></td>
               <td>
                 <a
                   href="https://github.com/Zain-wave/CrudData-Estructuras-de-Datos-en-Python"
@@ -168,9 +158,38 @@
                 </a>
               </td>
             </tr>
-            <tr>
+            <tr class="project-item" data-tech="python">
+              <td>Proyecto Domicilio</td>
+              <td>Sistema para solicitar domicilio</td>
+              <td><span class="tech-tag python">Python</span></td>
+              <td>
+                <a
+                  href="https://github.com/Zain-wave/Domi"
+                  target="_blank"
+                  class="github-link"
+                >
+                  <i class="fab fa-github"></i> Ver en GitHub
+                </a>
+              </td>
+            </tr>
+            <tr class="project-item" data-tech="python">
+              <td>Proyecto Bicicletas</td>
+              <td>Sistema de alquiler de bicicletas</td>
+              <td><span class="tech-tag python">Python</span></td>
+              <td>
+                <a
+                  href="https://github.com/Zain-wave/Green-City"
+                  target="_blank"
+                  class="github-link"
+                >
+                  <i class="fab fa-github"></i> Ver en GitHub
+                </a>
+              </td>
+            </tr>
+            <tr class="project-item" data-tech="python">
               <td>Historia Usuario</td>
               <td>Semana 3 Modulo 1</td>
+              <td><span class="tech-tag python">Python</span></td>
               <td>
                 <a
                   href="https://github.com/Zain-wave/User-History-3"
@@ -181,10 +200,10 @@
                 </a>
               </td>
             </tr>
-
-            <tr>
+            <tr class="project-item" data-tech="python">
               <td>Crudzaso_Games</td>
               <td>Proyecto Grupal Trivia</td>
+              <td><span class="tech-tag python">Python</span></td>
               <td>
                 <a
                   href="https://github.com/Zain-wave/Crudzaso_Games"
@@ -195,8 +214,44 @@
                 </a>
               </td>
             </tr>
+
+            <!-- Proyectos de HTML/CSS -->
+            <tr class="project-item" data-tech="html">
+              <td>Wish Realm — WorldHub</td>
+              <td>Proyecto Grupal Mundo de hadas</td>
+              <td><span class="tech-tag html">HTML/CSS</span></td>
+
+              <td>
+                <a
+                  href="https://choklitos21.github.io/WorldHub-AtlasCrudzaso-Wish/"
+                  target="_blank"
+                  class="github-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> Ver despliegue
+                </a>
+              </td>
+            </tr>
+
+            <tr class="project-item" data-tech="html">
+              <td>CRUDScope – HTML MediaPanel</td>
+              <td>Sistema CRUD de tareas</td>
+              <td><span class="tech-tag html">HTML/CSS</span></td>
+
+              <td>
+                <a href="#" target="_blank" class="github-link">
+                  <i class="fas fa-external-link-alt"></i> Ver despliegue
+                </a>
+              </td>
+            </tr>
+
+            <!-- Proyectos de JavaScript -->
           </tbody>
         </table>
+
+        <!-- Mensaje cuando no hay proyectos -->
+        <div id="no-projects-message" class="no-projects" style="display: none">
+          <p>No hay proyectos en esta categoría actualmente.</p>
+        </div>
       </section>
 
       <footer>
@@ -230,5 +285,7 @@
         </p>
       </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
