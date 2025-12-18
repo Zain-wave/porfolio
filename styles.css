@@ -1,3 +1,4 @@
+@import url(./contact.css);
 :root {
   --negro: #0a0a0a;
   --negro-claro: #1a1a1a;
@@ -443,8 +444,10 @@ td.pending {
 }
 
 @media (max-width: 768px) {
-  th:nth-child(3), td:nth-child(3),
-    th:nth-child(4), td:nth-child(4) {
+  th:nth-child(3),
+  td:nth-child(3),
+  th:nth-child(4),
+  td:nth-child(4) {
     min-width: 100px;
   }
 

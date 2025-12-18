@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      // Remover clase active de todos los botones
       filterButtons.forEach((btn) => btn.classList.remove("active"));
 
-      // Agregar clase active al botón clickeado
       this.classList.add("active");
 
       const filter = this.getAttribute("data-filter");
@@ -34,4 +32,39 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      if (!name || !email || !message) {
+        alert("Por favor completa todos los campos obligatorios (*)");
+        return;
+      }
+
+      const formData = {
+        name: name,
+        email: email,
+        subject: subject || "Sin asunto",
+        message: message,
+      };
+
+      alert(
+        `¡Gracias ${name}!\n\nTu mensaje ha sido enviado correctamente. Te responderé a ${email} en la mayor brevedad posible.`
+      );
+
+      contactForm.reset();
+
+      console.log("Datos del formulario:", formData);
+    });
+  }
 });

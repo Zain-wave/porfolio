@@ -15,28 +15,22 @@
       <header>
         <h1>Sebastian Vargas Ramirez</h1>
         <p class="subtitle">Desarrollador de Software</p>
-        <div class="contact-badges">
-          <a
-            href="https://api.whatsapp.com/send?phone=573011920185"
-            target="_blank"
-            class="badge"
-          >
-            <i class="fab fa-whatsapp"></i> WhatsApp
+
+        <!-- Agrega esto en tu index.html dentro del <header> -->
+        <nav style="margin-top: 20px">
+          <a href="#about" class="badge" style="margin: 5px">
+            <i class="fas fa-user"></i> Sobre mí
           </a>
-          <a
-            href="https://www.instagram.com/wrong_angel_v/"
-            target="_blank"
-            class="badge"
-          >
-            <i class="fab fa-instagram"></i> Instagram
+          <a href="#projects" class="badge" style="margin: 5px">
+            <i class="fas fa-code"></i> Proyectos
           </a>
-          <a href="mailto:y.u.u.k.ibrb@gmail.com" class="badge">
-            <i class="fas fa-envelope"></i> Gmail
+          <a href="#contact" class="badge" style="margin: 5px">
+            <i class="fas fa-envelope"></i> Contacto
           </a>
-          <a href="mailto:Zain-wave@outlook.com" class="badge">
-            <i class="fas fa-envelope"></i> Hotmail
+          <a href="mascotas.html" class="badge" style="margin: 5px">
+            <i class="fas fa-paw"></i> Mis Mascotas
           </a>
-        </div>
+        </nav>
       </header>
 
       <section class="about-section">
@@ -252,6 +246,106 @@
         <!-- Mensaje cuando no hay proyectos -->
         <div id="no-projects-message" class="no-projects" style="display: none">
           <p>No hay proyectos en esta categoría actualmente.</p>
+        </div>
+      </section>
+
+      <section class="contact-form-section" id="contact">
+        <h2 class="section-title">📬 Contáctame</h2>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <p>
+              ¿Tienes un proyecto en mente o quieres colaborar? ¡No dudes en
+              escribirme!
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Principal</h4>
+
+                  <a href="mailto:Zain-wave@outlook.com"
+                    >Zain-wave@outlook.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Alternativo</h4>
+                  <a href="mailto:y.u.u.k.ibrb@gmail.com"
+                    >y.u.u.k.ibrb@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=573011920185"
+                    target="_blank"
+                    >+57 301 192 0185</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre completo *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="tu@email.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="¿De qué quieres hablar?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Hola Sebastian, me gustaría contactarte porque..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+
+            <p class="form-note">* Campos obligatorios</p>
+          </form>
         </div>
       </section>
 

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Mascotas - Sebastian Vargas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .pets-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+      .pet-card {
+        background-color: var(--negro-claro);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .pet-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .pet-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 3px solid var(--morado-oscuro);
+      }
+
+      .pet-info {
+        padding: 20px;
+      }
+
+      .pet-name {
+        color: var(--blanco);
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .pet-name i {
+        color: var(--morado-claro);
+      }
+
+      .pet-description {
+        color: var(--gris);
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .pet-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .pet-tag {
+        background-color: var(--morado-oscuro);
+        color: var(--blanco);
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+        padding: 12px 25px;
+        background-color: var(--morado-oscuro);
+        color: var(--blanco);
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        background-color: var(--morado-claro);
+        transform: translateX(-5px);
+      }
+
+      @media (max-width: 768px) {
+        .pets-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .pet-image {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🐾 Mis Mascotas</h1>
+        <p class="subtitle">Compañeros de vida y aventuras</p>
+      </header>
+
+      <section class="about-section">
+        <h2 class="section-title">💖 Mis compañeros peludos</h2>
+        <p>
+          Además de mi pasión por el desarrollo de software, tengo un gran amor
+          por los animales. Estas son algunas de las mascotas que han compartido
+          su vida conmigo y me han enseñado sobre responsabilidad, cariño y
+          paciencia.
+        </p>
+      </section>
+
+      <section class="pets-section">
+        <div class="pets-gallery">
+          <!-- Mascota 1 -->
+          <article class="pet-card">
+            <img
+              src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Max - Labrador Dorado"
+              class="pet-image"
+            />
+            <div class="pet-info">
+              <h3 class="pet-name"><i class="fas fa-dog"></i> Max</h3>
+              <p class="pet-description">
+                Max es un labrador dorado de 4 años. Es extremadamente juguetón
+                y le encanta correr en el parque. Siempre está listo para una
+                aventura y tiene una energía contagiosa que alegra cualquier
+                día.
+              </p>
+              <div class="pet-details">
+                <span class="pet-tag">Edad: 4 años</span>
+                <span class="pet-tag">Raza: Labrador</span>
+                <span class="pet-tag">Personalidad: Juguetón</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mascota 2 -->
+          <article class="pet-card">
+            <img
+              src="https://images.unsplash.com/photo-1514888286974-6d03bde4ba4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Luna - Gato Siames"
+              class="pet-image"
+            />
+            <div class="pet-info">
+              <h3 class="pet-name"><i class="fas fa-cat"></i> Luna</h3>
+              <p class="pet-description">
+                Luna es una gata siamesa de 2 años. Es curiosa y le encanta
+                observar todo desde la ventana. Tiene la costumbre de "ayudarme"
+                cuando programo, usualmente recostándose sobre el teclado para
+                pedir atención.
+              </p>
+              <div class="pet-details">
+                <span class="pet-tag">Edad: 2 años</span>
+                <span class="pet-tag">Raza: Siamesa</span>
+                <span class="pet-tag">Personalidad: Curiosa</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mascota 3 -->
+          <article class="pet-card">
+            <img
+              src="https://images.unsplash.com/photo-1558322450-86c6d2f6fc33?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Rocky - Cuyo o Conejillo de Indias"
+              class="pet-image"
+            />
+            <div class="pet-info">
+              <h3 class="pet-name"><i class="fas fa-paw"></i> Rocky</h3>
+              <p class="pet-description">
+                Rocky es un cuyo (conejillo de indias) de 1 año. Es pequeño pero
+                tiene una personalidad enorme. Le encanta comer vegetales
+                frescos y hacer sonidos divertidos cuando está feliz o
+                emocionado.
+              </p>
+              <div class="pet-details">
+                <span class="pet-tag">Edad: 1 año</span>
+                <span class="pet-tag">Especie: Cuyo</span>
+                <span class="pet-tag">Personalidad: Sociable</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="about-section"
+        style="text-align: center; margin-top: 40px"
+      >
+        <h2 class="section-title">🏡 Nuestra convivencia</h2>
+        <p style="margin-bottom: 20px">
+          Cada una de mis mascotas ha sido una fuente de aprendizaje. Cuidar de
+          ellos me ha enseñado sobre responsabilidad, constancia y el valor del
+          cuidado hacia otros seres vivos.
+        </p>
+
+        <a href="index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Volver al Portafolio
+        </a>
+      </section>
+
+      <footer>
+        <div class="social-links">
+          <a
+            href="https://api.whatsapp.com/send?phone=573011920185"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/wrong_angel_v/"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://github.com/Zain-wave"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="mailto:y.u.u.k.ibrb@gmail.com" class="social-link"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p>
+          Contacto:
+          <a href="mailto:y.u.u.k.ibrb@gmail.com">y.u.u.k.ibrb@gmail.com</a> |
+          <a href="mailto:Zain-wave@outlook.com">Zain-wave@outlook.com</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
