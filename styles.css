@@ -416,7 +416,6 @@ footer a:hover {
   text-decoration: none;
 }
 
-/* Ajustes para la tabla con nueva columna */
 td .deploy-link {
   display: inline-flex;
   align-items: center;
@@ -454,5 +453,170 @@ td.pending {
   .deploy-link {
     font-size: 0.8rem;
     padding: 6px 8px;
+  }
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  background-color: var(--negro-claro);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid var(--morado-oscuro);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: var(--morado-oscuro);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(107, 70, 193, 0.3);
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-link {
+    width: 200px;
+    justify-content: center;
+  }
+}
+
+/* TASK 3: Sección de proyectos con grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background-color: var(--negro-claro);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--morado-oscuro);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(107, 70, 193, 0.2);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.project-header h3 {
+  color: var(--blanco);
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.project-tech {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.project-tech.python {
+  background-color: #306998;
+  color: white;
+}
+
+.project-tech.html {
+  background-color: #e34c26;
+  color: white;
+}
+
+.project-tech.javascript {
+  background-color: #f0db4f;
+  color: #323330;
+}
+
+.project-description {
+  color: var(--gris);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.project-footer {
+  margin-top: auto;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--morado-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.project-link:hover {
+  background-color: var(--morado-claro);
+  transform: translateX(5px);
+}
+
+/* Responsive para grid de proyectos */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header {
+    flex-direction: column;
+  }
+
+  .project-tech {
+    margin-left: 0;
+    margin-top: 5px;
+    align-self: flex-start;
   }
 }
