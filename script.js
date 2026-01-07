@@ -68,32 +68,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// Botón para cambiar texto de la sección "about" (toggle)
-document.addEventListener("DOMContentLoaded", function () {
-  const aboutPara = document.querySelector(".about-section > p");
-  const btn = document.getElementById("changeTextBtn");
-
-  if (!aboutPara || !btn) return;
-
-  const originalText = aboutPara.textContent.trim();
-  const shortText =
-    "Soy aspirante a Desarrollador de Software, centrado en frontend y backend. Busco crecer con proyectos reales.";
-
-  aboutPara.style.transition = "opacity 0.25s ease";
-
-  let showingShort = false;
-
-  btn.addEventListener("click", function () {
-    aboutPara.style.opacity = 0;
-    setTimeout(() => {
-      aboutPara.textContent = showingShort ? originalText : shortText;
-      aboutPara.style.opacity = 1;
-      showingShort = !showingShort;
-      btn.textContent = showingShort
-        ? "Ver versión completa"
-        : "Ver versión corta";
-    }, 250);
-  });
-});
-s;
